@@ -49,7 +49,6 @@ I bought as well as the quantity, and a total cost of my basket.
 |------------------------------------------------------|----------------------------------------------------|-------------------------------------|
 | `Void addItem(Product product, Integer quantity)`    | Customer adds product(s) to basket                 | -                                   |
 | `Void removeItem(Product product, Integer quantity)` | Customer removes product(s) from basket            | -                                   |
-|                                                      | If basket.paymentCompleted == false                | Return error                        |
 | `Float summarizeBasket(Basket basket)`               | If basket is empty                                 | Return 0                            | 
 |                                                      | If basket is not empty                             | Return sum                          |
 | `Void completePayment(Basket basket)`                | If basket is empty                                 | Return error                        |
