@@ -45,12 +45,15 @@ I bought as well as the quantity, and a total cost of my basket.
  | Boolean paymentCompleted | Is true if the payment of the basket is completed. False by default. |
 
 
-| Methods                                     | Scenario                                           | Outputs                             |
-|---------------------------------------------|----------------------------------------------------|-------------------------------------| 
-| `Float summarizeBasket(Basket basket)`      | If basket is empty                                 | Return 0                            | 
-|                                             | If basket is not empty                             | Return sum                          |
-| `Void completePayment(Basket basket)`       | If basket is empty                                 | Return error                        |
-|                                             | If basket is not empty and payment is successful   | Set basket.paymentCompleted to true |
-|                                             | If basket is not empty and payment is unsuccessful | Return error                        |
-| `String createReceipt(Basket basket)`       | If basket.paymentCompleted == true                 | Return itemised receipt             |
-|                                             | If basket.paymentCompleted == false                | Return error                        |
+| Methods                                              | Scenario                                           | Outputs                             |
+|------------------------------------------------------|----------------------------------------------------|-------------------------------------|
+| `Void addItem(Product product, Integer quantity)`    | Customer adds product(s) to basket                 | -                                   |
+| `Void removeItem(Product product, Integer quantity)` | Customer removes product(s) from basket            | -                                   |
+|                                                      | If basket.paymentCompleted == false                | Return error                        |
+| `Float summarizeBasket(Basket basket)`               | If basket is empty                                 | Return 0                            | 
+|                                                      | If basket is not empty                             | Return sum                          |
+| `Void completePayment(Basket basket)`                | If basket is empty                                 | Return error                        |
+|                                                      | If basket is not empty and payment is successful   | Set basket.paymentCompleted to true |
+|                                                      | If basket is not empty and payment is unsuccessful | Return error                        |
+| `String createReceipt(Basket basket)`                | If basket.paymentCompleted == true                 | Return itemised receipt             |
+|                                                      | If basket.paymentCompleted == false                | Return error                        |
