@@ -56,3 +56,4 @@ I bought as well as the quantity, and a total cost of my basket.
 |                                                      | If basket is not empty and payment is unsuccessful | Return error            |
 | `String createReceipt(Basket basket)`                | If basket.paymentCompleted == true                 | Return itemised receipt |
 |                                                      | If basket.paymentCompleted == false                | Return error            |
+
